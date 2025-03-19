@@ -1,0 +1,38 @@
+<h2>Product Inventory</h2>
+
+<!-- 🔎 Search Bar -->
+<input type="text" [(ngModel)]="searchTerm" (input)="filterProducts()" placeholder="Search products..." />
+
+<!-- Show message when inventory is empty -->
+<div *ngIf="filteredProducts.length === 0">
+  <p>No inventory products available.</p>
+</div>
+
+<!-- Show table only if products exist -->
+<table *ngIf="filteredProducts.length > 0">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Manufacturer</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let product of filteredProducts">
+    <td>{{ product.name }}</td>
+    <td>{{ product.description }}</td>
+    <td>{{ product.manufacturer }}</td>
+    <td>{{ product.price }}</td>
+    <td>{{ product.quantity }}</td>
+    <td>
+      <!-- New "View" Button -->
+      <button (click)="viewProduct(product.id)">View</button>
+      
+      <!-- Actions always visible but restricted for guests -->
+      <button (click)="editProduct(product.id)">Edit</button>
+      <button (click)="deleteProduct(product.id)">Delete</button>
+    </td>
+  </tr>
+</table>
+
+<button (click)="addProduct()">Add Product</button>

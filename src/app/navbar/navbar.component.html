@@ -1,0 +1,8 @@
+<nav>
+    <a routerLink="/">Products</a>
+    <a routerLink="/sign-in" *ngIf="!auth.isAuthenticated()">Sign In</a>
+    <a routerLink="/register" *ngIf="!auth.isAuthenticated()">Register</a>
+    <a routerLink="/about-us">About Us</a>
+    <button (click)="logout()" *ngIf="auth.isAuthenticated()">Logout</button>
+  </nav>
+  

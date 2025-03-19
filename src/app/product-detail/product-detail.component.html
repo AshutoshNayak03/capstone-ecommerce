@@ -1,0 +1,16 @@
+<h2>Product Details</h2>
+
+<div *ngIf="product; else notFound">
+  <p><strong>Name:</strong> {{ product.name }}</p>
+  <p><strong>Description:</strong> {{ product.description }}</p>
+  <p><strong>Manufacturer:</strong> {{ product.manufacturer }}</p>
+  <p><strong>Price:</strong> ${{ product.price }}</p>
+  <p><strong>Quantity:</strong> {{ product.quantity }}</p>
+
+  <!-- ✅ Use method instead of direct router call -->
+  <button (click)="navigateToInventory()">Back to Inventory</button>
+</div>
+
+<ng-template #notFound>
+  <p>Product not found.</p>
+</ng-template>
