@@ -40,5 +40,14 @@
       "mobile": "0123456789"
     }
   ],
-  "products": []
+  "products": [
+    {
+      "id": "1712",
+      "name": "Laptop",
+      "description": "Personal Laptop",
+      "manufacturer": "HP",
+      "price": 20000,
+      "quantity": 200
+    }
+  ]
 }
