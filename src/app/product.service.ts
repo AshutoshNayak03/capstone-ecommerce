@@ -30,4 +30,8 @@ export class ProductService {
   deleteProduct(id: number): Observable<any> {
     return this.http.delete(`${this.apiUrl}/${id}`);
   }
+
+  checkDuplicateProduct(name: string): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}?name=${name}`);
+  }
 }

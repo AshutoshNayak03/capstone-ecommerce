@@ -2,24 +2,62 @@
 
 <form #form="ngForm" (ngSubmit)="submitProduct()">
   <label for="name">Product Name:</label>
-  <input type="text" id="name" [(ngModel)]="product.name" name="name" required />
+  <input 
+    type="text" 
+    id="name" 
+    [(ngModel)]="product.name" 
+    name="name" 
+    required 
+    />
+  <div *ngIf="!product.name && form.submitted" class="error">Product name is required.</div>
 
   <label for="description">Description:</label>
-  <input type="text" id="description" [(ngModel)]="product.description" name="description" required />
+  <input 
+    type="text" 
+    id="description" 
+    [(ngModel)]="product.description" 
+    name="description" 
+    required 
+    />
+  <div *ngIf="!product.description && form.submitted" class="error">Description is required.</div>
 
   <label for="manufacturer">Manufacturer:</label>
-  <input type="text" id="manufacturer" [(ngModel)]="product.manufacturer" name="manufacturer" required />
+  <input 
+    type="text" 
+    id="manufacturer" 
+    [(ngModel)]="product.manufacturer" 
+    name="manufacturer" 
+    required 
+   />
+  <div *ngIf="!product.manufacturer && form.submitted" class="error">Manufacturer is required.</div>
 
   <label for="price">Price:</label>
-  <input type="number" id="price" [(ngModel)]="product.price" name="price" required min="1" />
+  <input 
+    type="number" 
+    id="price" 
+    [(ngModel)]="product.price" 
+    name="price" 
+    required 
+    min="1" 
+    />
+  <div *ngIf="product.price < 1 && form.submitted" class="error">Price must be at least $1.</div>
 
   <label for="quantity">Quantity:</label>
-  <input type="number" id="quantity" [(ngModel)]="product.quantity" name="quantity" required min="0" />
+  <input 
+    type="number" 
+    id="quantity" 
+    [(ngModel)]="product.quantity" 
+    name="quantity" 
+    required 
+    min="0" 
+    />
+  <div *ngIf="product.quantity < 0 && form.submitted" class="error">Quantity cannot be negative.</div>
 
-  <!-- Disable the button until the form is valid -->
+  <!-- Disable button until all required fields are filled -->
   <button type="submit" [disabled]="form.invalid">
     {{ isEditMode ? 'Update Product' : 'Add Product' }}
   </button>
   
   <button type="button" (click)="cancel()">Cancel</button>
 </form>
+

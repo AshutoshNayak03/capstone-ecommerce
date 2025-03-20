@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "firstName": "John",
       "lastName": "Doe",
       "email": "admin@example.com",
@@ -44,7 +44,7 @@
       "id": "6238",
       "name": "test",
       "description": "test1",
-      "manufacturer": "test1",
+      "manufacturer": "test2",
       "price": 1,
       "quantity": 1
     },
