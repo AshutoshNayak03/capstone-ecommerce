@@ -7,6 +7,11 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 ```bash
 npm install
 ```
+##Running JSON server
+
+```bash
+json-server --watch db.json --port 3000
+```
 
 ## Development server
 
