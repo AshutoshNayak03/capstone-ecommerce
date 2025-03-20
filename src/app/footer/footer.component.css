@@ -1,0 +1,27 @@
+footer {
+    background: linear-gradient(135deg, #184169, #438ad1); /* Gradient background */
+    color: #ffffff; /* White text for contrast */
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 1rem;
+    font-weight: bold;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3); /* Soft shadow for depth */
+    animation: footerFade 3s infinite alternate; /* Animation effect */
+}
+
+/* Keyframes for footer animation */
+@keyframes footerFade {
+    0% {
+        background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    }
+    100% {
+        background: linear-gradient(135deg, #4ca1af, #2c3e50);
+    }
+}
+
+footer p {
+    margin: 0;
+}
