@@ -13,7 +13,7 @@ nav {
     color: #ecf0f1; /* Light gray text */
     text-decoration: none;
     font-size: 1.1rem;
-    margin: 0 1rem;
+    
     padding: 0.5rem 1rem;
     border-radius: 4px;
     transition: all 0.3s ease;
@@ -102,7 +102,7 @@ nav {
     }
   
     nav a, nav button {
-      margin: 0.5rem 0;
+      
       width: 100%;
       text-align: center;
     }

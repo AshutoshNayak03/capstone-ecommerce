@@ -33,6 +33,7 @@ export class LoginComponent {
       if (users.length > 0) {
         localStorage.setItem('user', JSON.stringify(users[0]));
         this.router.navigate(['/']); // Redirect to Home Page
+        alert('Login Successfull!!!')
       } else {
         alert('Login Failed:\nInvalid email or password.'); // ✅ Show invalid credentials error
       }
