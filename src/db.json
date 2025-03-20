@@ -28,16 +28,26 @@
       "confirmPassword": "test1234",
       "location": "test",
       "mobile": "9937192721"
+    },
+    {
+      "id": "cbe3",
+      "firstName": "test",
+      "lastName": "test1",
+      "email": "t@t.com",
+      "password": "test1234",
+      "confirmPassword": "test1234",
+      "location": "test",
+      "mobile": "0123456789"
     }
   ],
   "products": [
     {
-      "id": "b774",
-      "name": "test",
-      "description": "test",
-      "manufacturer": "test",
-      "price": 1,
-      "quantity": 0
+      "id": "88b4",
+      "name": "Laptop",
+      "description": "Gaming Laptop",
+      "manufacturer": "Asus",
+      "price": 50000,
+      "quantity": 20
     }
   ]
 }

@@ -63,6 +63,10 @@ export class ProductListComponent implements OnInit {
   }
 
   viewProduct(id: string) {
+    if (!this.auth.isAuthenticated()) {
+      this.redirectToLogin();
+      return
+    }
     console.log(`Navigating to View Product with ID: ${id}`); 
     this.router.navigate(['/product-detail', id]);
   }

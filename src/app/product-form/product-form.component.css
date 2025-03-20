@@ -1,14 +1,27 @@
 /* General styles for the form container */
 form {
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background: linear-gradient(135deg, #1abc9c, #3498db); /* Vibrant gradient background */
+  width: 40%;
+  max-width: 800px;
+  min-width: 300px;
+  margin: auto; 
+  height: 400px; /* Set a fixed height */
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    padding: 50px;
+    background: linear-gradient(135deg, #7598d1, #3498db); /* Vibrant gradient background */
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     animation: fadeIn 1s ease-in-out, gradientShift 6s infinite alternate;
   }
   
+  body{
+    padding: 20px;
+  }
+  .form-class{
+    display: flex;
+    justify-content: center;
+  }
   /* Keyframes for form fade-in animation */
   @keyframes fadeIn {
     0% {
@@ -24,13 +37,13 @@ form {
   /* Keyframes for gradient background animation */
   @keyframes gradientShift {
     0% {
-      background: linear-gradient(135deg, #1abc9c, #3498db);
+      background: linear-gradient(135deg, #57b8e1, #3498db);
     }
     50% {
       background: linear-gradient(135deg, #3498db, #9b59b6);
     }
     100% {
-      background: linear-gradient(135deg, #9b59b6, #1abc9c);
+      background: linear-gradient(135deg, #9b59b6, #0a3e99);
     }
   }
   
@@ -102,7 +115,8 @@ form {
   button[type="submit"] {
     width: 100%;
     padding: 0.75rem;
-    background: linear-gradient(135deg, #e74c3c, #c0392b); /* Gradient background */
+     
+    background: linear-gradient(135deg, #33b955, #238632);/* Gradient background */
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -117,7 +131,7 @@ form {
   button[type="button"] {
     width: 100%;
     padding: 0.75rem;
-    background: linear-gradient(135deg, #95a5a6, #7f8c8d); /* Gradient background */
+    background: linear-gradient(135deg, #e74c3c, #c0392b);/* Gradient background */
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -142,9 +156,9 @@ form {
   }
   
   /* Keyframes for button gradient animation */
-  @keyframes buttonGradientShift {
+  /* @keyframes buttonGradientShift {
     0% {
-      background: linear-gradient(135deg, #e74c3c, #c0392b);
+      background: linear-gradient(135deg, #3f3ce7, #c0392b);
     }
     50% {
       background: linear-gradient(135deg, #c0392b, #e74c3c);
@@ -152,12 +166,12 @@ form {
     100% {
       background: linear-gradient(135deg, #e74c3c, #c0392b);
     }
-  }
+  } */
   
   /* Hover effect for the submit button */
   button[type="submit"]:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.5);
+    box-shadow: 0 6px 20px rgba(60, 231, 83, 0.868);
   }
   
   /* Hover effect for the cancel button */
