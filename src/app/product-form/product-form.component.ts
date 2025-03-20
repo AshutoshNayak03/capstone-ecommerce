@@ -11,7 +11,7 @@ import { ProductService } from '../product.service';
 export class ProductFormComponent implements OnInit {
   product = { name: '', description: '', manufacturer: '', price: 0, quantity: 0 };
   isEditMode = false;
-  productId: number | null = null;
+  productId: string | null = null;
 
   constructor(
     private productService: ProductService,
@@ -20,7 +20,7 @@ export class ProductFormComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.productId = Number(this.route.snapshot.paramMap.get('id'));
+    this.productId = this.route.snapshot.paramMap.get('id');
     
     console.log(`Product ID from route: ${this.productId}`); // ✅ Debugging: Ensure ID is retrieved
 

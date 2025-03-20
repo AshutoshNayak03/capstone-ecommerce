@@ -18,9 +18,26 @@
       "confirmPassword": "avinash",
       "location": "Bengaluru",
       "mobile": "1234567890"
+    },
+    {
+      "id": "80fd",
+      "firstName": "Ashutosh",
+      "lastName": "Nayak",
+      "email": "test@test.com",
+      "password": "test1234",
+      "confirmPassword": "test1234",
+      "location": "test",
+      "mobile": "9937192721"
     }
   ],
   "products": [
-    
+    {
+      "id": "b774",
+      "name": "test",
+      "description": "test",
+      "manufacturer": "test",
+      "price": 1,
+      "quantity": 0
+    }
   ]
 }
