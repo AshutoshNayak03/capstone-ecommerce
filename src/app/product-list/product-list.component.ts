@@ -22,6 +22,7 @@ export class ProductListComponent implements OnInit {
 
   loadProducts() {
     this.productService.getProducts().subscribe((data) => {
+      console.log('Loaded Products:', data);
       this.products = data;
       this.filteredProducts = data; // ✅ Initially, show all products
     });
@@ -34,7 +35,7 @@ export class ProductListComponent implements OnInit {
     );
   }
 
-  deleteProduct(id: number) {
+  deleteProduct(id: string) {
     if (!this.auth.isAuthenticated()) {
       this.redirectToLogin();
       return;
@@ -52,7 +53,7 @@ export class ProductListComponent implements OnInit {
     this.router.navigate(['/add-product']);
   }
 
-  editProduct(id: number) {
+  editProduct(id: string) {
     if (!this.auth.isAuthenticated()) {
       this.redirectToLogin();
       return;
@@ -61,7 +62,8 @@ export class ProductListComponent implements OnInit {
     this.router.navigate(['/edit-product', id]);
   }
 
-  viewProduct(id: number) {
+  viewProduct(id: string) {
+    console.log(`Navigating to View Product with ID: ${id}`); 
     this.router.navigate(['/product-detail', id]);
   }
 

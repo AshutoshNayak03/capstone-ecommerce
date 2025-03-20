@@ -10,7 +10,7 @@ import { ProductService } from '../product.service';
 })
 export class ProductDetailComponent implements OnInit {
   product: any = null;
-  productId: number | null = null;
+  productId: string | null = null;
 
   constructor(
     private productService: ProductService,
@@ -19,7 +19,7 @@ export class ProductDetailComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.productId = Number(this.route.snapshot.paramMap.get('id'));
+    this.productId = this.route.snapshot.paramMap.get('id');
 
     if (this.productId) {
       this.productService.getProduct(this.productId).subscribe(
