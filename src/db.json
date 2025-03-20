@@ -40,14 +40,5 @@
       "mobile": "0123456789"
     }
   ],
-  "products": [
-    {
-      "id": "88b4",
-      "name": "Laptop",
-      "description": "Gaming Laptop",
-      "manufacturer": "Asus",
-      "price": 50000,
-      "quantity": 20
-    }
-  ]
+  "products": []
 }

@@ -41,7 +41,9 @@ export class ProductListComponent implements OnInit {
       return;
     }
     this.productService.deleteProduct(id).subscribe(() => {
+      alert(`Product is Deleted`)
       this.loadProducts();
+
     });
   }
 
