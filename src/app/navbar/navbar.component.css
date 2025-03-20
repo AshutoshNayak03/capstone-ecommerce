@@ -1,0 +1,109 @@
+/* General styles for the nav bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #184169, #438ad1); /* Gradient background */
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styles for the links */
+  nav a {
+    color: #ecf0f1; /* Light gray text */
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Hover effect for links with animation */
+  nav a:hover {
+    color: #ffffff;
+    background: linear-gradient(135deg, #1abc9c, #16a085); /* Gradient on hover */
+    animation: linkHover 0.5s ease-in-out;
+  }
+  
+  /* Keyframes for link hover animation */
+  @keyframes linkHover {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Active link style (if needed) */
+  nav a.active {
+    background: linear-gradient(135deg, #1abc9c, #036d58); /* Gradient for active link */
+    color: #ffffff;
+    animation: activePulse 1.5s infinite;
+  }
+  
+  /* Keyframes for active link pulse animation */
+  @keyframes activePulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(26, 188, 156, 0.4);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(26, 188, 156, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(26, 188, 156, 0);
+    }
+  }
+  
+  /* Style for the logout button */
+  nav button {
+    background: linear-gradient(135deg, #e74c3c, #c0392b); /* Gradient for logout button */
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Hover effect for logout button with animation */
+  nav button:hover {
+    background: linear-gradient(135deg, #c0392b, #e74c3c); /* Gradient on hover */
+    animation: buttonHover 0.5s ease-in-out;
+  }
+  
+  /* Keyframes for button hover animation */
+  @keyframes buttonHover {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  
+    nav a, nav button {
+      margin: 0.5rem 0;
+      width: 100%;
+      text-align: center;
+    }
+  }

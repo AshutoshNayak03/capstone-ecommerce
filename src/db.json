@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "firstName": "John",
       "lastName": "Doe",
       "email": "admin@example.com",
@@ -10,57 +10,22 @@
       "mobile": "1234567890"
     },
     {
-      "id": "ca84",
-      "firstName": "Ashutosh",
-      "lastName": "Nayak",
-      "email": "test@test.com",
-      "password": "1234",
-      "location": "test",
-      "mobile": "9937192721"
-    },
-    {
-      "id": "b1b7",
-      "firstName": "Ashutosh",
-      "lastName": "Nayak",
-      "email": "test1@test.com",
-      "password": "test1234",
-      "confirmPassword": "test1234",
-      "location": "test",
-      "mobile": "9937192721"
-    },
-    {
-      "id": "5329",
-      "firstName": "Ashutosh",
-      "lastName": "Nayak",
-      "email": "t@t.com",
-      "password": "test1234",
-      "confirmPassword": "test1234",
-      "location": "test",
-      "mobile": "9937192721"
+      "id": "60d7",
+      "firstName": "avi",
+      "lastName": "t",
+      "email": "avi@avi.com",
+      "password": "avinash",
+      "confirmPassword": "avinash",
+      "location": "Bengaluru",
+      "mobile": "1234567890"
     }
   ],
   "products": [
     {
-      "id": "6238",
-      "name": "test",
-      "description": "test1",
-      "manufacturer": "test1",
-      "price": 1,
-      "quantity": 1
-    },
-    {
-      "id": "5916",
-      "name": "tesr",
-      "description": "test",
-      "manufacturer": "test",
-      "price": 1,
-      "quantity": 1
-    },
-    {
-      "id": "0587",
-      "name": "laptop",
-      "description": "test",
-      "manufacturer": "test",
+      "id": "7097",
+      "name": "Mobile",
+      "description": "Smart",
+      "manufacturer": "Tech",
       "price": 100,
       "quantity": 1
     }

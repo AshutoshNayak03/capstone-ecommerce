@@ -1,0 +1,152 @@
+/* General styles for the login form container */
+form {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, #1abc9c, #3498db); /* Vibrant gradient background */
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out, gradientShift 6s infinite alternate;
+  }
+  
+  /* Keyframes for form fade-in animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Keyframes for gradient background animation */
+  @keyframes gradientShift {
+    0% {
+      background: linear-gradient(135deg, #1abc9c, #3498db);
+    }
+    50% {
+      background: linear-gradient(135deg, #3498db, #9b59b6);
+    }
+    100% {
+      background: linear-gradient(135deg, #9b59b6, #1abc9c);
+    }
+  }
+  
+  /* Styles for form headings */
+  h2 {
+    text-align: center;
+    color: #ffffff; /* White text for contrast */
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    animation: slideIn 1s ease-in-out;
+  }
+  
+  /* Keyframes for heading slide-in animation */
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Styles for input fields */
+  input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Semi-transparent border */
+    border-radius: 5px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    color: #ffffff; /* White text */
+    transition: all 0.3s ease;
+  }
+  
+  /* Placeholder styling */
+  input::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Semi-transparent placeholder */
+  }
+  
+  /* Hover effect for input fields */
+  input:hover {
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Focus effect for input fields */
+  input:focus {
+    outline: none;
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transform: scale(1.02);
+  }
+  
+  /* Styles for the submit button */
+  button[type="submit"] {
+    width: 100%;
+    padding: 0.75rem;
+    background: linear-gradient(135deg, #e74c3c, #c0392b); /* Gradient background */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite, buttonGradientShift 4s infinite alternate;
+  }
+  
+  /* Keyframes for button pulse animation */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Keyframes for button gradient animation */
+  @keyframes buttonGradientShift {
+    0% {
+      background: linear-gradient(135deg, #e74c3c, #c0392b);
+    }
+    50% {
+      background: linear-gradient(135deg, #c0392b, #e74c3c);
+    }
+    100% {
+      background: linear-gradient(135deg, #e74c3c, #c0392b);
+    }
+  }
+  
+  /* Hover effect for the submit button */
+  button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(231, 76, 60, 0.5);
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 480px) {
+    form {
+      padding: 1.5rem;
+    }
+  
+    h2 {
+      font-size: 1.75rem;
+    }
+  
+    input, button[type="submit"] {
+      padding: 0.6rem;
+    }
+  }
