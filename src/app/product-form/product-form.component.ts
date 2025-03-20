@@ -51,9 +51,16 @@ export class ProductFormComponent implements OnInit {
         this.router.navigate(['/']);
       });
     } else {
-      this.productService.addProduct(this.product).subscribe(() => {
-        alert('Product added successfully!');
-        this.router.navigate(['/']);
+      // ✅ Check for duplicate product before adding
+      this.productService.checkDuplicateProduct(this.product.name).subscribe((existingProducts) => {
+        if (existingProducts.length > 0) {
+          alert(`Product with the name "${this.product.name}" already exists!`);
+        } else {
+          this.productService.addProduct(this.product).subscribe(() => {
+            alert('Product added successfully!');
+            this.router.navigate(['/']);
+          });
+        }
       });
     }
   }

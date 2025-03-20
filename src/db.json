@@ -21,13 +21,6 @@
     }
   ],
   "products": [
-    {
-      "id": "7097",
-      "name": "Mobile",
-      "description": "Smart",
-      "manufacturer": "Tech",
-      "price": 100,
-      "quantity": 1
-    }
+    
   ]
 }
